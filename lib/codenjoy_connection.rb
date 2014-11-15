@@ -1,5 +1,6 @@
 require "codenjoy_connection/version"
 require "codenjoy_connection/exceptions"
+require "codenjoy_connection/player"
 
 module CodenjoyConnection
   def self.prepare_url(opts = {})
@@ -14,5 +15,10 @@ module CodenjoyConnection
     raise CodenjoyConnection::GenericError.new("Please, specify a username for connection.") unless username
 
     @@url = "ws://#{host}:#{port}/#{game_url}user=#{username}"
+  end
+
+  def self.play(player, opts)
+     url = prepare_url(opts)
+     player = CodenjoyConnection::Player.new(player)
   end
 end

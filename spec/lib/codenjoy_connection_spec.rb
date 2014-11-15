@@ -39,4 +39,17 @@ describe CodenjoyConnection do
       end
     end
   end
+
+  describe "#play" do
+    before(:each) do
+      expect(CodenjoyConnection).to receive(:prepare_url).with(@params)
+      @player = double({})
+      allow(@player).to receive(:process_data)
+      allow(@player).to receive(:make_step)
+    end
+
+    it "should call #prepare_url" do
+      CodenjoyConnection.play(@player, @params)
+    end
+  end
 end
