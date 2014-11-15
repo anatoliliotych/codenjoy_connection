@@ -20,7 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+    require 'codenjoy_connection'
+    class Player
+        def initialize
+            # initialization of your user
+        end
+
+        def process_data(data)
+            # logic for processing data  
+        end
+        def make_step
+            # logic for making step
+        end
+    end
+
+    player = Player.new
+    opts = {:username => 'anatoli', :host=> 'localhost', :port => '8080', :game_url => 'codenjoy-contest/ws?'}
+    CodenjoyConnection.play(player,opts)
+```
 
 ## Contributing
 
