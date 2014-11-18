@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['anatoliliotych']
   spec.email         = ['anatoli.liotych@gmail.com']
   spec.summary       = %q{Gem handling ws connection and simple communication for numerous games in Codenjoy.}
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/anatoliliotych/codenjoy_connection'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
